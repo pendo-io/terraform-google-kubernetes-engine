@@ -34,12 +34,4 @@ terraform {
       version = ">= 4.47.0, != 4.49.0, != 4.50.0, < 8"
     }
   }
-
-  provider_meta "google" {
-    module_name = "blueprints/terraform/terraform-google-kubernetes-engine:asm/v34.0.0"
-  }
-
-  provider_meta "google-beta" {
-    module_name = "blueprints/terraform/terraform-google-kubernetes-engine:asm/v34.0.0"
-  }
 }

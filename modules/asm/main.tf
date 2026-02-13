@@ -61,7 +61,7 @@ module "cpr" {
   count = var.mesh_management != "MANAGEMENT_AUTOMATIC" ? 1 : 0
 
   source  = "terraform-google-modules/gcloud/google//modules/kubectl-wrapper"
-  version = "~> 3.1"
+  version = "~> 4.0"
 
   project_id       = var.project_id
   cluster_name     = var.cluster_name
@@ -80,7 +80,7 @@ module "kubectl_asm_wait_for_controlplanerevision_custom_resource_definition" {
   count = var.mesh_management == "MANAGEMENT_AUTOMATIC" ? 1 : 0
 
   source  = "terraform-google-modules/gcloud/google//modules/kubectl-wrapper"
-  version = "~> 3.1"
+  version = "~> 4.0"
 
   project_id              = var.project_id
   cluster_name            = var.cluster_name
@@ -100,7 +100,7 @@ module "kubectl_asm_wait_for_controlplanerevision" {
   count = var.mesh_management == "MANAGEMENT_AUTOMATIC" ? 1 : 0
 
   source  = "terraform-google-modules/gcloud/google//modules/kubectl-wrapper"
-  version = "~> 3.1"
+  version = "~> 4.0"
 
   project_id              = var.project_id
   cluster_name            = var.cluster_name
